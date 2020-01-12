@@ -6,6 +6,7 @@ import cucumber.api.*;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
+		format={"html:report/SerenityDemo.html"}
 //	features="src/test/java/test.feature",
 //	glue={"api.steps"}
 		)
