@@ -20,6 +20,11 @@
 Feature: Title of your feature
   I want to use this template for my feature file
 
+  Background: User is Logged In
+    Given I navigate to the login page
+    When I submit username and password
+    Then I should be logged in
+
   @login
   Scenario Outline: Title of your scenario
     Given ope Discover login page
@@ -28,4 +33,24 @@ Feature: Title of your feature
 
     Examples: 
       | username | password |
-      | brangas  | tester   |
+      | tesfdsf  | tester   |
+      | branfggas  | tester   |
+      
+        @checksomething
+  Scenario Outline: check something
+    Given search text "<searchText>"
+    When click entered
+    Then display search results
+    Examples: 
+      | searchText | 
+      | iPhone11  | 
+      
+ @Clicksomthing
+  Scenario Outline: click something
+    Given search resuls "<phone>"
+    When click somehyperlink
+    Then see wats happening
+   Examples:
+   |phone|
+   |Samsung|
+      

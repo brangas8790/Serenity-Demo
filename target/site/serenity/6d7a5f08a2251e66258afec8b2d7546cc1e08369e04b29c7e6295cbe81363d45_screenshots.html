@@ -129,7 +129,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-01-2020 00:19</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 02-02-2020 00:20</span>
     <br style="clear:left"/>
 </div>
 
@@ -154,6 +154,9 @@
                                 </div>
                             </div>
 
+                            <div class="requirementNarrative">Background: User is Logged In
+                                    <p></p>
+                            </div>
                         </td>
                         <td valign="top" align="right">
                             <p class="tag">
@@ -176,9 +179,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Title of your scenario
+                                <span class="error-color">Title of your scenario
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -205,7 +208,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabledBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: 'Bharanis-MacBook-Air.local', ip: '2601:246:5580:25c0:0:0:0:3%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.2', java.version: '1.8.0_162'Driver info: driver.version: unknown</span>
+                    <span class="error-message error-message-title">No such element exception: Timed out after 2 seconds. Element not found</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -221,11 +224,11 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                    <h4>org.openqa.selenium.NoSuchElementException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>api.steps.LoginPage.checkDifferentPage(LoginPage.java:52)<br />api.steps.stepsFile.display_error_message(stepsFile.java:50)<br />✽.display error message(api/steps/test.feature:27)<br /></pre>
+                        <pre>api.steps.LoginPage.login(LoginPage.java:47)<br />api.steps.stepsFile.invalid_and(stepsFile.java:62)<br />✽.invalid "brangas" and "tester"(api/steps/test.feature:31)<br /></pre>
                     </div>
 
                 </div>
@@ -235,13 +238,13 @@
 
 
                 <div class="panel-body">
-                    <a href="pagesource9789455646995343.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource3424257518610738037.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="2ddf93e34578fc67d6cf0148f765baa097e39ee7041be1d8f6dd53cf8a0fc593.png" title=" Example: {username=brangas, password=tester}" width="1200"/>
-                <img src="2ddf93e34578fc67d6cf0148f765baa097e39ee7041be1d8f6dd53cf8a0fc593.png" title=" Then display error message: <span class='failing-color'>FAILURE</span>" width="1200"/>
+                <img src="b8d64ee05049fe5704b052fa62d88f0f31a39d9c8c3854c6d11a64423762796b.png" title=" Example: {username=brangas, password=tester}" width="1200"/>
+                <img src="b8d64ee05049fe5704b052fa62d88f0f31a39d9c8c3854c6d11a64423762796b.png" title=" When invalid &quot;brangas&quot; and &quot;tester&quot;: <span class='error-color'>ERROR</span>" width="1200"/>
             </div>
         </div>
 

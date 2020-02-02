@@ -1,24 +1,14 @@
 package api.steps;
-import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.Color;
 
-
-import cucumber.api.Scenario;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.PageObject;
@@ -41,11 +31,27 @@ public class LoginPage extends PageObject{
 	@Step("testLoginPage")
 	public void login(String username, String passwd) throws InterruptedException, IOException{
 	uname.sendKeys(username);
-	uname.type("testttuyt");
+	//uname.type("testttuyt");
 	pwd.sendKeys(passwd);
     submit.click();
-   
+    System.out.println(getDriver().getWindowHandles().size());
+    ((JavascriptExecutor)getDriver()).executeScript("window.open()");
+    System.out.println(getDriver().getWindowHandle().toString());
+    List<String> tabs=new ArrayList<String>(getDriver().getWindowHandles());
+    getDriver().switchTo().window(tabs.get(1));
+    System.out.println(Serenity.getCurrentSessionID());
+    getDriver().get("https://www.google.com");
+    getDriver().switchTo().window(tabs.get(0));
+    getDriver().get("https://www.facebook.com");
+   // getDriver().navigate().back();
+    //String color1=uname.getCssValue("color");
+  //  uname.get
+   // String hex=Color.fromString(color1).asHex();
+  //  Thread.sleep(10000);
+  
+    
 	}
+	
 	public void checkDifferentPage(){
 		checboxValidation.click();
 		
